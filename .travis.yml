@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 language: java
 jdk:
     - openjdk8
@@ -11,4 +12,19 @@ jobs:
        - mvn clean install
        - cp .travis.settings.xml $HOME/.m2/settings.xml
        - mvn clean deploy -DmuleDeploy -Dserver=$server -Denvironment=$environment -Dworkers=$workers -DworkerType=$workerType -DmuleVersion=$muleVersion -DappName=$appName
+=======
+language: java
+jdk:
+    - openjdk8
+cache:
+    directories:
+        - "$HOME/.cache"    
+jobs:
+    - stage: deploy
+      name: 'Deploy To Dev Environment'
+      script:
+       - mvn clean install
+       - cp .travis.settings.xml $HOME/.m2/settings.xml
+       - mvn clean deploy -DmuleDeploy -Dserver=$server -Denvironment=$environment -Dworkers=$workers -DworkerType=$workerType -DmuleVersion=$muleVersion -DappName=$appName
+>>>>>>> 97229395c7cec87924c2bd17de616850149979a5
       if: branch = dev

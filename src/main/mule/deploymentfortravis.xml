@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="deploymentfortravisFlow" doc:id="95cd4ff3-01a9-472c-821c-cd64495aebc7" >
 		<http:listener doc:name="Listener" doc:id="4b058849-1590-4ab2-b05c-b6fdbf772f39" config-ref="HTTP_Listener_config" path="/travisdep"/>
-		<set-payload value='#["This payload is:" ++ now()]' doc:name="Set Payload" doc:id="57f7cec4-9010-48df-9642-04f3f0e90a17" />
+		<set-payload value='#["Payload is local time which is:" ++ now()]' doc:name="Set Payload" doc:id="57f7cec4-9010-48df-9642-04f3f0e90a17" />
 	</flow>
 </mule>

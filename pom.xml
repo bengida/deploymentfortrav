@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
 	<artifactId>deploymentfortravis</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>mule-application</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>mule-application</packaging>
 
 	<name>deploymentfortravis</name>
 
-    <properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.2.2-hf2</app.runtime>
+		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
 
@@ -25,6 +26,9 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
 				<configuration>
 					<cloudHubDeployment>
 						<server>${server}</server>
