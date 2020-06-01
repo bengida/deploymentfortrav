@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <settings>
 	<servers>
 		<server>
@@ -7,14 +6,4 @@
 			<password>${env.password}</password>
 		</server>
 	</servers>
-=======
-<settings>
-	<servers>
-		<server>
-			<id>anypoint-platform</id>
-			<username>${env.username}</username>
-			<password>${env.password}</password>
-		</server>
-	</servers>
->>>>>>> 97229395c7cec87924c2bd17de616850149979a5
 </settings>
